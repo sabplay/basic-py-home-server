@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="max-w-4xl w-full">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-2">Current Time</h1>
+                    <p class="text-xl text-gray-600">Auto-detected timezone</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div id="clock" class="text-7xl md:text-9xl font-mono font-bold text-indigo-600 mb-8"></div>
+                    <div id="date" class="text-2xl text-gray-600 mb-6"></div>
+                    <div id="timezone" class="text-xl bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full"></div>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="globe" class="text-indigo-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Timezone</h3>
+                        </div>
+                        <p id="timezone-info" class="text-gray-700"></p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="clock" class="text-indigo-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Daylight</h3>
+                        </div>
+                        <p id="daylight-info" class="text-gray-700"></p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-indigo-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Location</h3>
+                        </div>
+                        <p id="location-info" class="text-gray-700"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

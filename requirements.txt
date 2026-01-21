@@ -1,6 +1,0 @@
-rich
-psutil
-pyftpdlib
-flask
-livereload
-speedtest-cli

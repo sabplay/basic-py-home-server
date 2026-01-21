@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Form in HTML</title>
+  </head>
+  <body>
+    <h1>Sign up form</h1>
+    <div>
+      <form action="submitted.html">
+        <label>Full Name:</label><input type="text" style="margin-left: 5px;">
+
+        <br>
+        <br>
+
+        <label>E-Mail:</label><input type="email" style="margin-left: 25px;">
+        
+        <br>
+        <br>
+
+        <label>Date of Birth:  </label><input type="date">
+
+        <br>
+        <br>
+
+        <label>Password:</label><input id="password" type="password" style="margin-left: 12.5px;"><a><button onclick="togglePasswordVisibility(this)">Show Password</button></a>
+        </a>
+        <br>
+        <br>
+
+        <label>Gender:  </label><label>male</label><input id="gender" type="radio"> <label>female</label><input id="gender" type="radio">
+        
+        <br>
+        <br>
+
+        <input type="checkbox"> <label>MBA</label>
+        <input type="checkbox"> <label>B Sc.</label>
+        <input type="checkbox"> <label>M Sc.</label>
+        <input type="checkbox"> <label>B CS</label>
+        <input type="checkbox"> <label>M CS</label>
+        <input type="checkbox"> <label>B General Engineering</label>
+        <input type="checkbox"> <label>M General Engineering</label>        
+
+        <br>
+        <br>
+
+        <input type="submit">
+      </form>
+    </div>
+    <script>
+    function togglePasswordVisibility(button) {
+        const passwordInput = document.getElementById('password');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            button.textContent = 'Hide Password';
+        } else {
+            passwordInput.type = 'password';
+            button.textContent = 'Show Password';
+        }
+    }
+</script>
+  </body>
+</html>
